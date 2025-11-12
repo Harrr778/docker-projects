@@ -1,0 +1,20 @@
+version: '3.9'
+services:
+  app_v1:
+    build:
+      context: .
+      args:
+        APP_FILE: app_v1.py
+    container_name: app_v1
+    ports:
+      - "5001:5000"
+
+  app_v2:
+    build:
+      context: .
+      args:
+        APP_FILE: app_v2.py
+    container_name: app_v2
+    ports:
+      - "5002:5000"
+
